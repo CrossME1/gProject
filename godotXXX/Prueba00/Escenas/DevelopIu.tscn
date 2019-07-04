@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prueba00/Escenas/DevelopIu.gd" type="Script" id=1]
+[ext_resource path="res://Prueba00/Images/desarrollo.png" type="Texture" id=2]
+[ext_resource path="res://Prueba00/Escenas/DevelopGame.tscn" type="PackedScene" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 360.0
+margin_right = -277.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -56.2498
+margin_top = 2.25
+margin_right = 1023.75
+margin_bottom = 722.25
+rect_scale = Vector2( 0.5, 1 )
+texture = ExtResource( 2 )
+
+[node name="developGamebutton" type="Button" parent="TextureRect"]
+margin_left = 377.0
+margin_top = 200.0
+margin_right = 484.0
+margin_bottom = 220.0
+rect_scale = Vector2( 3.5, 3 )
+text = "Develop Game"
+
+[node name="backButton" type="Button" parent="TextureRect"]
+margin_top = 680.0
+margin_right = 42.0
+margin_bottom = 700.0
+rect_scale = Vector2( 3, 1.8 )
+text = "Back"
+
+[node name="DevelopGame" parent="." instance=ExtResource( 3 )]
+visible = false
+margin_left = -362.25
+margin_top = -2.24997
+margin_right = -362.25
+margin_bottom = -2.25
+
+[connection signal="pressed" from="TextureRect/developGamebutton" to="." method="_on_developGamebutton_pressed"]
+[connection signal="pressed" from="TextureRect/backButton" to="." method="_on_backButton_pressed"]

@@ -1,0 +1,46 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="gProject"
+run/main_scene="res://Prueba00/Escenas/inicioPresentacion.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+save_game="*res://singleton_save.gd"
+Consolas_global="*res://Prueba00/Escenas/singleton_parametros.gd"
+
+[debug]
+
+settings/stdout/print_fps=true
+
+[display]
+
+window/size/width=1080
+window/size/height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx=false
+quality/depth/hdr=false
+environment/default_environment="res://default_env.tres"
